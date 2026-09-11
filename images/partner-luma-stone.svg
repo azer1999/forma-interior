@@ -1,0 +1,6 @@
+<svg width="145" height="46" viewBox="0 0 145 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Luma Stone">
+<rect x="14" y="13" width="25" height="20" rx="2" stroke="#1B1B1B" stroke-width="2.2"/>
+<path d="M18 28L34 17M24 33L39 22" stroke="#777" stroke-width="1.5" stroke-linecap="round"/>
+<text x="50" y="23" fill="#1B1B1B" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.4">LUMA</text>
+<text x="50" y="35" fill="#777" font-family="Arial, Helvetica, sans-serif" font-size="8" letter-spacing="2">STONE</text>
+</svg>

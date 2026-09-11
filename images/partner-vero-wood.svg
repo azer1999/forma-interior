@@ -1,0 +1,6 @@
+<svg width="145" height="46" viewBox="0 0 145 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vero Wood">
+<path d="M17 13L28 33L39 13" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 19C25 17 31 17 36 19M23 25C27 24 30 24 34 25" stroke="#777" stroke-width="1.4" stroke-linecap="round"/>
+<text x="50" y="23" fill="#1B1B1B" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.4">VERO</text>
+<text x="50" y="35" fill="#777" font-family="Arial, Helvetica, sans-serif" font-size="8" letter-spacing="2">WOOD</text>
+</svg>
