@@ -9,20 +9,22 @@
 
     // Cached selectors
     const $navigationHolder = $(".navigation-holder");
-    const $mobileMenuOpenBtn = $(".mobail-menu .open-btn");
-    const $mobileMenuToggleBtn = $(".mobail-menu .navbar-toggler");
     const $mainNavUl = $("#navbar > ul");
     const $body = $("body");
-    const $menuCloseBtns = $(".menu-close");
 
     /**
      * Toggle mobile navigation
      */
     function toggleMobileNavigation() {
-        $mobileMenuOpenBtn.on("click", (e) => {
+        $(document).off("click.mobileNav", ".mobail-menu .open-btn").on("click.mobileNav", ".mobail-menu .open-btn", (e) => {
             e.stopImmediatePropagation();
-            $navigationHolder.toggleClass("slideInn");
-            $mobileMenuToggleBtn.toggleClass("x-close");
+            const $currentNavigation = $(e.currentTarget).closest(".navigation");
+            const $currentNavigationHolder = $currentNavigation.find(".navigation-holder");
+            const $currentToggleBtn = $currentNavigation.find(".mobail-menu .navbar-toggler");
+            $(".navigation-holder").not($currentNavigationHolder).removeClass("slideInn");
+            $(".mobail-menu .navbar-toggler").not($currentToggleBtn).removeClass("x-close");
+            $currentNavigationHolder.toggleClass("slideInn");
+            $currentToggleBtn.toggleClass("x-close");
             return false;
         });
     }
@@ -82,8 +84,8 @@
      * Close navigation menu and toggle button states
      */
     function closeNavigation() {
-        $navigationHolder.removeClass("slideInn");
-        $mobileMenuToggleBtn.removeClass("x-close");
+        $(".navigation-holder").removeClass("slideInn");
+        $(".mobail-menu .navbar-toggler").removeClass("x-close");
     }
 
     // Initialize functions on load and bind event listeners
@@ -100,7 +102,7 @@
         );
 
         $body.on("click", closeNavigation);
-        $menuCloseBtns.on("click", closeNavigation);
+        $(document).off("click.closeMobileNav", ".menu-close").on("click.closeMobileNav", ".menu-close", closeNavigation);
     }
 
     initEssentialFunctions();
@@ -947,7 +949,6 @@
         initHeroRightSlider();
         initHeroProjectSlider();
         sortingGallery();
-        toggleMobileNavigation();
         smallNavFunctionality();
     });
 
